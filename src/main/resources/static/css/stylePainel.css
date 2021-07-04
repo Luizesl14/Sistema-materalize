@@ -1,0 +1,10 @@
+.votos{
+    text-align: center;
+    font-size: 6rem;
+}
+.small{
+    text-align: center;
+    margin-top:  -4;
+    background-color: blue;
+    display: block;
+}

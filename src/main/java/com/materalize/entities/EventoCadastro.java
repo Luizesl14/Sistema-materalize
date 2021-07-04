@@ -1,6 +1,20 @@
 package com.materalize.entities;
 
-public class EvntoCadastro {
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class EventoCadastro implements Serializable {
+
+    private  static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private  long codigo;
 
     //atributos
     private String nome;
@@ -10,8 +24,6 @@ public class EvntoCadastro {
 
 
     //Getters and Setters
-
-
     public String getNome() {
         return nome;
     }
@@ -43,4 +55,8 @@ public class EvntoCadastro {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+
+
 }
