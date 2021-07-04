@@ -1,6 +1,4 @@
-package com.materalize.entities;
-
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+package com.materalize.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

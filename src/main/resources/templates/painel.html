@@ -50,7 +50,7 @@
                     <P>Painel Controle</P>
                 </a>
                
-               <a href="login.html"> <button class="btn btn-outline-secondary">Sair</button></a>
+               <a href="pag/public"> <button class="btn btn-outline-secondary">Sair</button></a>
             </div>
         </div>
     </header>
@@ -120,7 +120,43 @@
                         </div>
                     </div>
 
-                    
+                    <div class="container">
+
+                        <header class="cabecalho_container">
+                            <h4 class="display-6">Controle de Leads</h4>
+                        </header>
+                        <table class="table table-hover" cellspacing="0"
+                               width="100%">
+                            <thead>
+                              <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Celular</th>
+                                <th class="controller_size" scope="col">Controle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr th:each="evento : ${eventos}">
+                                <th th:text="${evento.codigo}"> </th>
+                                  <td th:text="${evento.nome}"></td>
+                                <td th:text="${evento.email}"></td>
+                                <td th:text="${evento.phone}"></td>
+                                <td><button id="excluir" class="btn btn-dark btn-sm">x</button>
+                                    <a href="/editar"><button id="edit" class="btn btn-dark btn-sm">e</button></a>
+                                    </td>
+                               </tr>
+            
+                            </tbody>
+                          </table>
+            
+                       
+             
+                       
+            
+                   
+            
+                </div>
 
                     
                 
