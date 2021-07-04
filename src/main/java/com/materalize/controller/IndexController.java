@@ -18,5 +18,15 @@ public class IndexController {
         return "painel";
     }
 
+    @RequestMapping("/cadastre")
+    public String cad(){
+        return "cadastre";
+    }
+
+    @RequestMapping("/login")
+    public String log(){
+        return "login";
+    }
+
 
 }

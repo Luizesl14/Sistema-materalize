@@ -54,7 +54,7 @@ public class EventoCadastro implements Serializable {
         this.password = password;
     }
 
-
-
-
+    public long getCodigo() {
+        return codigo;
+    }
 }
