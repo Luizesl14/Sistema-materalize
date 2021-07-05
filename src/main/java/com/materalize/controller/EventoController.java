@@ -11,30 +11,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class EventoController {
 
-
     @Autowired
-    private EvendoRepository er;
+    private  EvendoRepository er;
 
-    @RequestMapping(value = "/cadastro", method = RequestMethod.GET)
+    @RequestMapping(value ="/cadastrarEvento", method=RequestMethod.GET)
     public String form(){
-       return "cadastro";
+        return "cadastre";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public  String form(EventoCadastro eventoCadastro){
+    @RequestMapping(value ="/cadastrarEvento", method=RequestMethod.POST)
+    public String form(EventoCadastro eventoCadastro){
         er.save(eventoCadastro);
-        return "redirect:https://www.casadocodigo.com.br/";
+        return "redirect:/cadastrarEvento";
     }
 
-
-
-    @RequestMapping("/admim")
-    public ModelAndView listaEventos(){
-        ModelAndView mv = new ModelAndView("painel");
-        Iterable<EventoCadastro> evento =  er.findAll();
-        mv.addObject("evento", evento);
-        return mv;
-
-    }
 
 }

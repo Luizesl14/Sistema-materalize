@@ -22,6 +22,16 @@ public class EventoCadastro implements Serializable {
 
 
     //Getters and Setters
+
+
+    public long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -54,7 +64,5 @@ public class EventoCadastro implements Serializable {
         this.password = password;
     }
 
-    public long getCodigo() {
-        return codigo;
-    }
+
 }
