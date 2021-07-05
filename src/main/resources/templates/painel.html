@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
     <meta charset="utf-8">
@@ -120,51 +121,45 @@
                         </div>
                     </div>
 
-                    <div class="container">
 
-                        <header class="cabecalho_container">
-                            <h4 class="display-6">Cadastros</h4>
-                        </header>
-                        <table class="table table-hover" cellspacing="0"
-                               width="100%">
-                            <thead>
-                              <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Celular</th>
-                                <th class="controller_size" scope="col">Controle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr th:each="evento : ${evento}">
-                                <th th:text="${evento.}"> </th>
-                                  <td th:text="${evento.nome}"></td>
-                                <td th:text="${evento.email}"></td>
-                                <td th:text="${evento.phone}"></td>
-                                <td><button id="excluir" class="btn btn-dark btn-sm">x</button>
-                                    <a href="/editar"><button id="edit" class="btn btn-dark btn-sm">e</button></a>
-                                    </td>
-                               </tr>
-            
-                            </tbody>
-                          </table>
-            
-                       
-             
-                       
-            
-                   
-            
-                </div>
 
-                    
+
+
+
+                        </div>
+
+
                 
                 </div>
             </div>
         </div>
 
+        <div class="container" width="1200">
+
+            <table class="table table-hover" cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Celular</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="evento : ${listaUser}">
+                    <th th:text="${evento.codigo}"> </th>
+                    <td th:text="${evento.nome}"></td>
+                    <td th:text="${evento.email}"></td>
+                    <td th:text="${evento.celular}"></td>
+                </tr>
+
+                </tbody>
+            </table>
+
     </main>
+
+
 
     <footer class="text-muted py-5">
         <div class="container">

@@ -13,10 +13,7 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping("/painel")
-    public String painel(){
-        return "painel";
-    }
+
 
 
     @RequestMapping("/login")
