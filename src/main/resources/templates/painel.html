@@ -66,14 +66,14 @@
                         <div class="card shadow-sm">
                             <img class="bd-placeholder-img card-img-top"    src="img/caldas-novas-hot-park-lazy-river.jpg" width="100%" height="225">
 
-                            <div class="card-body"> 
+                            <div class="card-body ">
                                <h1 class="display-6 text-center">Le Jardin</h1>
-                               <h2 class="display-1 votos">50</h2>
+                               <h2 class="display-1 votos"><p></p>100</h2>
                               <sub class="small">Votos</sub>
-                               
-                               
+
+
                                 <div class="d-flex justify-content-between align-items-center">
-                            
+
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                         
                                 </div>
@@ -86,14 +86,14 @@
                         <div class="card shadow-sm">
                             <img class="bd-placeholder-img card-img-top"    src="img/Rio-Quente-resorts.jpg" width="100%" height="225">
 
-                            <div class="card-body"> 
+                            <div class="card-body">
                                <h1 class="display-6 text-center">Evian</h1>
                                <h2 class="display-1 votos">100</h2>
                               <sub class="small">Votos</sub>
-                               
-                               
+
+
                                 <div class="d-flex justify-content-between align-items-center">
-                            
+
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                         
                                 </div>
@@ -156,6 +156,25 @@
 
                 </tbody>
             </table>
+        </div>
+
+        <div class="container" width="1200">
+
+            <table class="table table-hover" cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th scope="col">Votos com nº 1</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="ev : ${listas}">
+                    <th th:text="${ev.voto}"> </th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
 
     </main>
 

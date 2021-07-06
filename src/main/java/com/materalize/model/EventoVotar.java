@@ -1,9 +1,6 @@
 package com.materalize.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -13,8 +10,13 @@ public class EventoVotar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  long codigo;
+
+
     private  String empreendimento;
-    private  long voto;
+    private  String voto;
+
+    @OneToOne
+    private  EventoCadastro eventoCadastro;
 
 
     public long getCodigo() {
@@ -33,11 +35,13 @@ public class EventoVotar implements Serializable {
         this.empreendimento = empreendimento;
     }
 
-    public long getVoto() {
+    public String getVoto() {
         return voto;
     }
 
-    public void setVoto(long voto) {
+    public void setVoto(String voto) {
         this.voto = voto;
     }
+
+
 }

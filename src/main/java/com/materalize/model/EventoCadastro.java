@@ -1,9 +1,6 @@
 package com.materalize.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -20,6 +17,8 @@ public class EventoCadastro implements Serializable {
     private  String celular;
     private String password;
 
+    @OneToOne
+    private EventoVotar eventoVotar;
 
     //Getters and Setters
 

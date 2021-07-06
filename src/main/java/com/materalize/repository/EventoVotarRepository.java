@@ -1,7 +1,11 @@
 package com.materalize.repository;
-
-import com.materalize.model.EventoCadastro;
+import com.materalize.model.EventoVotar;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-public interface EventoVotarRepository extends CrudRepository<EventoCadastro, String> {
+import java.util.List;
+
+public interface EventoVotarRepository extends CrudRepository<EventoVotar, String> {
+
+
 }
