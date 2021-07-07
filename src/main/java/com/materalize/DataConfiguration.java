@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DataConfiguration {
+
     public DataConfiguration() {
     }
 
@@ -18,7 +19,7 @@ public class DataConfiguration {
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/cadastrouser");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/usercad");
         dataSource.setUsername("root");
         dataSource.setPassword("12345");
         return dataSource;

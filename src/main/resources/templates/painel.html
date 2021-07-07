@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/stylePainel.css">
+    <link rel="stylesheet" href="../css/stylePainel.css">
 
 
     <style>
@@ -51,7 +51,7 @@
                     <P>Painel Controle</P>
                 </a>
                
-               <a href="pag/public"> <button class="btn btn-outline-secondary">Sair</button></a>
+               <a href="/"> <button class="btn btn-outline-secondary">Sair</button></a>
             </div>
         </div>
     </header>
@@ -134,47 +134,54 @@
             </div>
         </div>
 
-        <div class="container" width="1200">
+        <div class="container" width="100%">
+            <p class="display-6">Cadastro de Usuarios</p>
 
-            <table class="table table-hover" cellspacing="0"
-                   width="100%">
+            <table class="table table-striped table-bordered table-sm table-dark" cellspacing="0" width="100%">
                 <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Celular</th>
+                    <th scope="col">Senha</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="evento : ${listaUser}">
-                    <th th:text="${evento.codigo}"> </th>
-                    <td th:text="${evento.nome}"></td>
+                <tr  th:each="evento : ${listaUser}">
+                    <div class="scrollable">
+                    <th th:text="${evento.codigo}"></th>
                     <td th:text="${evento.email}"></td>
-                    <td th:text="${evento.celular}"></td>
+                    <td th:text="${evento.senha}"></td>
+                    </div>
                 </tr>
+
 
                 </tbody>
             </table>
         </div>
 
-        <div class="container" width="1200">
-
-            <table class="table table-hover" cellspacing="0"
-                   width="100%">
+        <div class="container table-overflow" width="100%" >
+            <p class="display-6">Votos usuarios</p>
+            <table class="table table-striped table-bordered table-sm table-dark " cellspacing="0" width="100%">
                 <thead>
                 <tr>
-                    <th scope="col">Votos com nº 1</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Le jardin</th>
+                    <th scope="col">Evian</th>
+                    <th scope="col">Olímpia Thermas</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr th:each="ev : ${listas}">
-                    <th th:text="${ev.voto}"> </th>
+                <tbody >
+                 <tr  th:each="evento : ${listaUser2}">
+                    <th th:text="${evento.codigo}"></th>
+                    <td th:text="${evento.lejardin}"></td>
+                    <td th:text="${evento.evian}"></td>
+                    <td th:text="${evento.olimpia}"></td>
                 </tr>
 
                 </tbody>
             </table>
         </div>
+
 
     </main>
 
